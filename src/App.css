@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+.btn:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.image-bg{
+  height: 80vh; 
+  max-width: 70vw; 
+  margin-top: 6vh; 
+}
+
+.sus{
+  margin-left: 30%; 
+}
+
+.panel{
+  margin-top: 30vh; 
+  margin-left: 88vw; 
+  width: 8vw; 
+}
+
+.panel1{
+  margin-top: 15vh;
+  margin-left: 90vw; 
+}
+
+.login {
+  margin-top: 20vh;
+  margin-left: 38vw; 
+
+}
+
+.inputs{
+  width: 100%; 
+  height: 6vh; 
+  border-radius: 5px; 
+}
