@@ -22,10 +22,10 @@ function Ambience() {
     })
 
     return (
-        <div className="bgDiv">
+        <div className="bgDiv" style={{ overflow: 'hidden' }}>
             <Header/>
             {/*<img className="image-bg shadow-lg" src={source}></img>*/}
-            <video className="image-bg shadow-lg" src={source} autoplay="true" loop="true"></video>
+            <video className="image-bg shadow-lg" src={source} autoplay="true" loop="true" style={{ overflow: 'hidden' }}></video>
             {/* ?<Player img={source}/> */}
             {/* <div className="col-1 p-3 panel1 shadow-lg fixed-top"></div> */}
             <SidePanel/>
