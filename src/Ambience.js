@@ -10,7 +10,8 @@ import App from './App';
 import {str} from './App';
 import Header from './components/header';
 import { render } from '@testing-library/react';
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from 'react-player'
+
 
 function Ambience() {
     const [source, setSource] = useState("");
@@ -24,10 +25,18 @@ function Ambience() {
     return (
         <div className="bgDiv" style={{ overflow: 'hidden' }}>
             <Header/>
-            {/*<img className="image-bg shadow-lg" src={source}></img>*/}
             <video className="image-bg shadow-lg" src={source} autoplay="true" loop="true" style={{ overflow: 'hidden' }}></video>
-            {/* ?<Player img={source}/> */}
-            {/* <div className="col-1 p-3 panel1 shadow-lg fixed-top"></div> */}
+    
+            {/* 
+                <ReactPlayer className="image-bg shadow-lg" source="C:\Users\sriva\newambify\public\images\spaceastronautstaringoutofwindow.mov" playing="true" loop="true"/>
+                <ReactPlayer
+                    className="image-bg shadow-lg"
+                    url="C:\Users\sriva\newambify\public\images\spaceastronautstaringoutofwindow.mov"
+                    playing
+                    loop
+                    controls={false}
+                />
+            */}
             <SidePanel/>
             
         </div>

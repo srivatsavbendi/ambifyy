@@ -52,11 +52,15 @@
   margin-left: 30%; 
 }
 
-.panel{
-  margin-top: 25vh; 
-  margin-left: 85vw; 
+.paneldiv{
+  display: none; 
+  margin-top: 13vh; 
+  margin-left: 80vw; 
   margin-right: 4vw; 
+}
+
+.panels{
+  margin: 3vh; 
   padding: 1vw; 
-  padding-top: 2vw; 
-  padding-bottom: 2vw; 
+
 }
