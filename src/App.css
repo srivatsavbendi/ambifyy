@@ -42,25 +42,28 @@
   text-decoration: none;
 }
 
-.image-bg{
-  height: 80vh; 
-  max-width: 70vw; 
-  margin-top: 6vh; 
-}
-
 .sus{
   margin-left: 30%; 
 }
 
+.image-bg{
+  width: 60vw; 
+  margin-top: 8vh; 
+  margin-right: 20vw; 
+}
+
 .paneldiv{
-  display: none; 
-  margin-top: 13vh; 
-  margin-left: 80vw; 
-  margin-right: 4vw; 
+  margin-top: 22vh; 
+  margin-left: 73vw; 
+  margin-right: 10vw; 
 }
 
 .panels{
   margin: 3vh; 
   padding: 1vw; 
 
+}
+
+.displaybtn{
+  display: none; 
 }

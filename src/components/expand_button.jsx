@@ -18,28 +18,35 @@ class ExpandButton extends React.Component {
             this.setState({isToggled: false, className : "btn btn-secondary btn-sm m-2 shadow-lg "})
             document.querySelector('.bgDiv').style.width = '100vw';
             document.querySelector('.bgDiv').style.height = '100vh';
-            document.querySelector('.image-bg').style.width = 'auto';
-            document.querySelector('.image-bg').style.maxWidth = '70vw';
-            document.querySelector('.image-bg').style.height = '80vh';
-            document.querySelector('.image-bg').style.marginTop = '6vh';
-            {/*
-            document.querySelector('.header1').style.display = 'block';
-            document.querySelector('.panel').style.marginLeft = '88vw';
-            */}
+
+            document.querySelector('.image-bg').style.width = '60vw';
+            document.querySelector('.image-bg').style.height = 'auto';
+            document.querySelector('.image-bg').style.marginTop = '8vh';
+            document.querySelector('.image-bg').style.marginRight = '20vw';
+
+            document.querySelector('.paneldiv').style.display = 'block';
+            document.querySelector('.paneldiv').style.marginTop = '22vh';
+            document.querySelector('.paneldiv').style.marginLeft = '73vw';
+            document.querySelector('.paneldiv').style.marginRight = '10vw';
+
+            document.querySelector('.displaybtn').style.display = 'none';
+
             document.exitFullscreen();
         }else{
             this.setState({isToggled: true, className: "btn btn-primary btn-sm m-2 shadow-lg "});
             document.querySelector('.bgDiv').style.width = '100vw';
             document.querySelector('.bgDiv').style.height = '100vh';
+
             document.querySelector('.image-bg').style.width = '100vw';
-            document.querySelector('.image-bg').style.maxWidth = '100vw';
             document.querySelector('.image-bg').style.height = '100vh';
-            document.querySelector('.image-bg').style.marginTop = '0vh';
-            {/*
-            document.querySelector('.header1').style.display = 'none';
-            document.querySelector('.panel').style.marginTop = '35vh';
-            document.querySelector('.panel').style.marginLeft = '90vw';
-            */}
+            document.querySelector('.image-bg').style.margin = '0vh';
+
+            document.querySelector('.paneldiv').style.marginTop = '13vh';
+            document.querySelector('.paneldiv').style.marginLeft = '77.5vw';
+            document.querySelector('.paneldiv').style.marginRight = '5vw';
+
+            document.querySelector('.displaybtn').style.display = 'block';
+
             document.documentElement.requestFullscreen();
         }
 

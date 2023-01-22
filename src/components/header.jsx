@@ -19,7 +19,7 @@ class Header extends Component {
                     <div className="row px-5">
                         <span className="col-4"><LinkedButton url="/" text={<i className="material-symbols-outlined">dark_mode</i>} /></span>
                         <span className="col-4"><ExpandButton text={<i className="material-symbols-outlined">open_in_full</i>} /></span>
-                        <span className="col-4"><DisplayButton text={<i className="material-symbols-outlined">expand_more</i>} /></span>
+                        <span className="col-4 displaybtn"><DisplayButton text={<i className="material-symbols-outlined">expand_more</i>} /></span>
                     </div>
                 </span>
             </div>
