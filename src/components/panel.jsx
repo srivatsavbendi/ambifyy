@@ -33,7 +33,7 @@ class SidePanel extends React.Component {
                         <SongText name={this.state.songName} author={this.state.songAuthor}/>
                     </div>
                     <div className="col-4 justify-content-center">
-                        <MusicButton type="jazz" text={<i className="material-symbols-outlined">music_note</i>}/>
+                        <MusicButton updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="jazz" text={<i className="material-symbols-outlined">music_note</i>}/>
                     </div>
                     <div className="col-4 justify-content-center">
                         <MusicButton updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="classic" text={<i className="material-symbols-outlined">piano</i>}/>

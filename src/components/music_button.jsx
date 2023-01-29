@@ -50,6 +50,24 @@ class MusicButton extends React.Component {
 
 
             }
+
+            if(this.props.type == "jazz"){
+                let urls = ["images/silverymoon.mp3", "images/together.mp3", "images/daydream.mp3"]
+                let names = ["By The Light of the Silvery Moon", "Together With You", "Ipanema Daydream"]
+                let authors = ["E's Jammy Jams", "JR Tundra", "Bird Creek"]
+    
+                let random = Math.floor(Math.random()*urls.length);
+
+                let x = names[random];
+                let y = authors[random];
+                this.props.updateSongName(x);
+                this.props.updateSongAuthor(y);
+                this.setState({url: urls[random]}); 
+                this.refs.audioRef.src = urls[random];
+                this.refs.audioRef.play();
+
+
+            }
         }
     }
 
