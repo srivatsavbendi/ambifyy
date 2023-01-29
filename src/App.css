@@ -67,3 +67,7 @@
 .displaybtn{
   display: none; 
 }
+
+.songtext{
+  overflow: hidden; 
+}

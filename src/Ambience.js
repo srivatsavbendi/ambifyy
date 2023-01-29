@@ -11,6 +11,7 @@ import {str} from './App';
 import Header from './components/header';
 import { render } from '@testing-library/react';
 import ReactPlayer from 'react-player'
+import MusicButton from './components/music_button';
 
 
 function Ambience() {
@@ -37,8 +38,7 @@ function Ambience() {
                     controls={false}
                 />
             */}
-            <SidePanel/>
-            
+                <SidePanel />
         </div>
     );    
     
