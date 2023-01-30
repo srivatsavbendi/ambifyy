@@ -3,7 +3,7 @@ import React from 'react';
 class ToggleButton extends React.Component {
     state = { 
         isToggled : false,
-        className : "btn btn-lg m-1 shadow-lg",
+        className : "btn btn-lg m-1 shadow",
         music: new Audio(this.props.audioFile)
     }
     render() { 

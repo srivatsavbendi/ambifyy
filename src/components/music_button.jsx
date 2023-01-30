@@ -8,7 +8,7 @@ class MusicButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: "btn btn-lg m-1 shadow-lg my-2", 
+            className: "btn btn-lg m-1 shadow my-2", 
             url: "",
             songName: " ",
             songAuthor: " "

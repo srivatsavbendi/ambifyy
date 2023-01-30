@@ -1,112 +1,108 @@
 import React, { Component } from 'react';
-import './Timer.css';
 
 class Timer extends Component {
-  state = {
-    mode: 'Standard',
-    minutes: 0,
-    seconds: 0,
-    workMinutes: 0,
-    restMinutes: 0,
-    presetTime: 0,
-    timeLeft: 0,
-    timer: null,
+  constructor(props) {
+    super(props);
+    this.state = {
+      isRunning: false,
+      time: {
+        minutes: '00',
+        seconds: '00',
+      },
+    };
+    this.handleMinuteChange = this.handleMinuteChange.bind(this);
+    this.handleSecondChange = this.handleSecondChange.bind(this);
+    this.handleStart = this.handleStart.bind(this);
+    this.handleStop = this.handleStop.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+    this.handleOnFocus = this.handleOnFocus.bind(this);
   }
 
-  handleModeToggle = (mode) => {
-    this.setState({ mode });
-    document.querySelector("Standard").style.backgroundColor = 'blue';
-  }
-
-  handleStandardSubmit = (minutes, seconds) => {
+  handleMinuteChange(event) {
+    let minutes = event.target.value
+    if (minutes.length > 2) minutes = minutes.substring(0, 2);
+    if (minutes === '') minutes = '00';
     this.setState({
-      minutes,
-      seconds,
-      timeLeft: (minutes * 60) + seconds,
+      time: {
+        minutes,
+        seconds: this.state.time.seconds
+      }
     });
-    this.startTimer();
   }
 
-  handlePomodoroSubmit = (workMinutes, restMinutes) => {
+  handleSecondChange(event) {
+    let seconds = event.target.value
+    if (seconds.length > 2) seconds = seconds.substring(0, 2);
+    if (seconds === '') seconds = '00';
     this.setState({
-      workMinutes,
-      restMinutes,
-      timeLeft: workMinutes * 60,
+      time: {
+        minutes: this.state.time.minutes,
+        seconds
+      }
     });
-    this.startTimer();
   }
 
-  handlePresetSubmit = (presetTime) => {
-    this.setState({
-      presetTime,
-      timeLeft: presetTime,
-    });
-    this.startTimer();
-  }
-
-  startTimer = () => {
-    clearInterval(this.state.timer);
-    const timer = setInterval(() => {
-      if (this.state.timeLeft > 0) {
-        this.setState({ timeLeft: this.state.timeLeft - 1 });
-      } else {
-        clearInterval(this.state.timer);
-        this.playSoundEffect();
+  handleStart() {
+    if (this.state.time.minutes === '00' && this.state.time.seconds === '00') return;
+    this.setState({ isRunning: true });
+    this.timer = setInterval(() => {
+      let { minutes, seconds } = this.state.time;
+      minutes = parseInt(minutes);
+      seconds = parseInt(seconds);
+      if (seconds > 0) {
+        this.setState({
+          time: {
+            minutes,
+            seconds: seconds - 1,
+          },
+        });
+      } else if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(this.timer);
+        } else {
+          this.setState({
+            time: {
+              minutes: minutes - 1,
+              seconds: 59,
+            },
+          });
+        }
       }
     }, 1000);
-    this.setState({ timer });
   }
 
-  playSoundEffect = () => {
-    // play sound effect
+  handleStop() {
+    this.setState({ isRunning: false });
+    clearInterval(this.timer);
+  }
+
+  handleReset() {
+    this.setState({
+      time: {
+        minutes: '00',
+        seconds: '00',
+      },
+    });
+  }
+  handleOnFocus(event) {
+    event.target.value = ""
   }
 
   render() {
-    const { mode, minutes, seconds, workMinutes, restMinutes, presetTime, timeLeft } = this.state;
-
     return (
-      <div className="container timer-container">
-        <div className="row justify-content-center my-2">
-            <button className="btn btn-lg shadow-lg mode-button col-3 mx-2 Standard" onClick={() => this.handleModeToggle('Standard')}><i className="material-symbols-outlined">timer</i></button>
-            <button className="btn btn-lg shadow-lg mode-button col-3 mx-2 Pomodoro" onClick={() => this.handleModeToggle('Pomodoro')}><i className="material-symbols-outlined">nutrition</i></button>
-            <button className="btn btn-lg shadow-lg mode-button col-3 mx-2" onClick={() => this.handleModeToggle('Pre Set')}><i className="material-symbols-outlined">filter_frames</i></button>
+      <div>
+        <div className="row m-1 ">
+          <div className="col-2 m-1"> </div>
+          <input className="col-4 border-0 display-6 text-right minutes " type="number" value={this.state.time.minutes} onChange={this.handleMinuteChange} placeholder='00' onFocus={this.handleOnFocus} min="00" max="59" />
+          <input className="col-4 border-0 display-6 text-left seconds" type="number" value={this.state.time.seconds} onChange={this.handleSecondChange} placeholder='00' onFocus={this.handleOnFocus} min="00" max="59" />
+          <div className="col-1"> </div>
         </div>
 
-        <div className="row my-3">
-            {mode === 'Standard' && (
-              <form>
-                <div className="row justify-content-center">
-                  <input type="number" placeholder="Minutes" value={minutes} onChange={e => this.setState({ minutes: e.target.value })} className=" input-sm border-0 shadow-lg rounded col-4 mx-2" />
-                  <input type="number" placeholder="Seconds" value={seconds} onChange={e => this.setState({ seconds: e.target.value })} className=" input-sm border-0 shadow-lg rounded col-4 mx-2" />                    
-                  <button className="btn btn-primary col-2 mx-2" onClick={() => this.handleStandardSubmit(minutes, seconds)}>></button>
-                </div>
-              </form>
-            )}
-            {mode === 'Pomodoro' && (
-              <form>
-                <div className="row justify-content-center">
-                  <input type="number" placeholder="Work Minutes" value={workMinutes} onChange={e => this.setState({ workMinutes: e.target.value })} className=" input-sm border-0 shadow-lg rounded col-4 mx-2" />
-                  <input type="number" placeholder="Rest Minutes" value={restMinutes} onChange={e => this.setState({ restMinutes: e.target.value })} className=" input-sm border-0 shadow-lg rounded col-4 mx-2" />
-                  <button className="btn btn-primary col-2 mx-2" onClick={() => this.handlePomodoroSubmit(workMinutes, restMinutes)}>></button>
-                </div>
-              </form>
-            )}
-            {mode === 'Pre Set' && (
-              <div>
-                <button className="btn btn-primary preset-button" onClick={() => this.handlePresetSubmit(600)}>10 min</button>
-                <button className="btn btn-primary preset-button" onClick={() => this.handlePresetSubmit(900)}>15 min</button>
-                <button className="btn btn-primary preset-button" onClick={() => this.handlePresetSubmit(1800)}>30 min</button>
-                <button className="btn btn-primary preset-button" onClick={() => this.handlePresetSubmit(3600)}>60 min</button>
-                <button className="btn btn-primary preset-button" onClick={() => this.handlePresetSubmit(7200)}>2 hrs</button>
-              </div>
-            )}
-        </div>
-        <div className="row">
-          <div className="col">
-            {mode === 'Standard' && <div className="timer" style={{ color: 'blue' }}>{Math.floor(timeLeft / 60)} : {timeLeft % 60}</div>}
-            {mode === 'Pomodoro' && timeLeft > this.state.workMinutes * 60 ? 
-              <div className="timer" style={{ color: 'blue' }}>{Math.floor(timeLeft / 60)} : {timeLeft % 60}</div> : <div className="timer" style={{ color: 'green' }}>{Math.floor(timeLeft / 60)} : {timeLeft % 60}</div>}
-            {mode === 'Pre Set' && <div className="timer" style={{ color: 'blue' }}>{Math.floor(timeLeft / 60)} : {timeLeft % 60}</div>}
+        <div className="justify-content-center">
+          <div className="row m-1">
+            <button className="col m-2 shadow btn btn-lg " onClick={this.handleStart}>Start</button>
+            <button className="col m-2 shadow btn btn-lg " onClick={this.handleStop}>Stop</button>
+            <button className="col m-2 shadow btn btn-lg " onClick={this.handleReset}>Reset</button>
           </div>
         </div>
       </div>
@@ -115,4 +111,3 @@ class Timer extends Component {
 }
 
 export default Timer;
-

@@ -58,9 +58,13 @@ class SidePanel extends React.Component {
                 <div className="row panels panel shadow-lg">
                     <Timer/>
                 </div>
-                <div className="row panels panel shadow-lg">
-                    <textarea className="form-control form-control-lg" type="text" rows="5" placeholder="Notes"></textarea>
-                </div>
+                {/*
+                    <div className="row panels panel shadow-lg">
+                        <textarea className="form-control form-control-lg" type="text" rows="5" placeholder="Notes"></textarea>
+                    </div>
+                */}
+
+                
             </div>
         );
     }
