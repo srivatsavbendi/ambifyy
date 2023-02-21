@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import LinkedButton from './components/linked_button'
 import Header from './components/header';
 import Wall from './components/wall';
+import LandingHeader from './components/landingheader';
 
 class Home extends Component {
     state = {
@@ -11,7 +12,7 @@ class Home extends Component {
     render() { 
         return (
             <div style={{ overflow: 'hidden' }}>   
-                <Header/>
+                <LandingHeader/>
                 <Wall/>
             </div>
         );

@@ -39,7 +39,7 @@ class SidePanel extends React.Component {
                         <MusicButton updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="classic" text={<i className="material-symbols-outlined">piano</i>}/>
                     </div>
                     <div className="col-4 justify-content-center">
-                        <MusicButton type="lofi" text={<i className="material-symbols-outlined">radio</i>}/>
+                        <MusicButton updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="lofi" text={<i className="material-symbols-outlined">radio</i>}/>
                     </div>
                 </div>
 
@@ -49,10 +49,10 @@ class SidePanel extends React.Component {
                         <ToggleButton audioFile="images/campfire-1.mp3" className="my-2" text={<i className="material-symbols-outlined">local_fire_department</i>}/>
                     </div>
                     <div className="col-4 justify-content-center">
-                        <ToggleButton audioFile="images/rain-01.mp3" className="my-2" text={<i className="material-symbols-outlined">rainy</i>}/>
+                        <ToggleButton audioFile="images/rain.mp3" className="my-2" text={<i className="material-symbols-outlined">rainy</i>}/>
                     </div>
                     <div className="col-4 justify-content-center">
-                        <ToggleButton audioFile="images/wind-howl-01.mp3" className="my-2" text={<i className="material-symbols-outlined">air</i>}/>
+                        <ToggleButton audioFile="images/wind.mp3" className="my-2" text={<i className="material-symbols-outlined">air</i>}/>
                     </div>
                 </div>
                 <div className="row panels panel shadow-lg">

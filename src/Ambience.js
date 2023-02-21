@@ -26,7 +26,7 @@ function Ambience() {
     return (
         <div className="bgDiv" style={{ overflow: 'hidden' }}>
             <Header/>
-            <video className="image-bg shadow-lg" src={source} autoplay="true" loop="true" style={{ overflow: 'hidden' }}></video>
+            <video className="image-bg shadow-lg" src={source} autoplay="true" loop="true" muted="true" style={{ overflow: 'hidden' }}></video>
     
             {/* 
                 <ReactPlayer className="image-bg shadow-lg" source="C:\Users\sriva\newambify\public\images\spaceastronautstaringoutofwindow.mov" playing="true" loop="true"/>

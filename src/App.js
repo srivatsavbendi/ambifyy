@@ -8,6 +8,7 @@ import Wall from './components/wall';
 //import Login from './Login';
 import {Link} from 'react-router-dom';
 import Home from './Home'; 
+import Landing from './Landing';
 //import Signup from './Signup';
 //import Profile from './Profile';
 
@@ -19,7 +20,8 @@ function App() {
         <script src="https://apis.google.com/js/api.js"></script>
         <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Landing/>} />
+          <Route path='/home' element={<Home />} />
           <Route path='/ambience' element={<Ambience/>} />
         </Routes>
         </Router>

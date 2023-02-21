@@ -48,7 +48,7 @@
 
 .image-bg{
   width: 60vw; 
-  margin-top: 8vh; 
+  margin-top: 17vh; 
   margin-right: 20vw; 
 }
 
@@ -70,4 +70,9 @@
 
 .songtext{
   overflow: hidden; 
+}
+
+
+.coolors{
+  background-color: #847979; 
 }

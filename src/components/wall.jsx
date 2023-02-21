@@ -6,27 +6,29 @@ class Wall extends Component {
     state = {  } 
     render() { 
         return (
-            <div className = "row m-4">
-                <div className="col-4">
-                    <Card bgPath="snowycozycabin.mov" title="Cozy Cabin In The Winter" author="TheBearThatsGolden"/>
-                    <Card bgPath="watershoes.mov" title="Standing In The Rain" author="UrAWizardHarry"/>
-                    <Card bgPath="girlstudying.mov" title="Cozy Studying" author="UrAWizardHarry"/>
-                    <Card bgPath="10.gif" title="LoFi Bedroom" author="luxpae2"/>
-                    <Card bgPath="10.gif" title="LoFi Bedroom" author="luxpae2"/>
-                </div>
-                <div className="col-4">
-                    <Card bgPath="spaceastronautstaringoutofwindow.mov" title="Astronaut Gazing At The Stars" author="UrAWizardHarry"/>
-                    <Card bgPath="girlonledge.mov" title="Sitting On A Ledge" author="akashboletum"/>
-                    <Card bgPath="rainleaves.mov" title="Cozy Cafe" author="akashboletum"/>
-                    <Card bgPath="8.gif" title="Dystopian Metropolis" author="akashboletum"/>
-                    <Card bgPath="14.gif" title="Suburban Neighborhood" author="UrAWizardHarry"/>
-                </div>
-                <div className="col-4">
-                    <Card bgPath="snowycity.mov" title="Snowy City" author="UrAWizardHarry"/>
-                    <Card bgPath="darkalley.mov" title="Dark Alley At Night" author="luxpae2"/>
-                    <Card bgPath="floorleaves.mov" title="Street Isolation" author="luxpae2"/>
-                    <Card bgPath="2.gif" title="Snowy Resort" author="earthypure"/>
-                    <Card bgPath="ambify31.png" title="Snowy Resort" author="earthypure"/>
+            <div className = "row m-4 mt-5">
+                <div className="row mt-3">
+                    <div className="col-4 mt-5">
+                        <Card bgPath="paristrain.mov" title="Train Through Paris " tag1="Landscape" tag2="City" tag3="Night"/>
+                        <Card bgPath="watershoes.mov" title="Standing In The Rain" tag1="Animated" tag2="Rain" tag3="Sneakers"/>
+                        <Card bgPath="girlstudying.mov" title="Cozy Studying" tag1="Animated" tag2="Room" tag3="Chill"/>
+                        <Card bgPath="nightparking.mp4" title="Chill In The Car" tag1="Landscape" tag2="City" tag3="Night"/>
+                        <Card bgPath="nightbridge.mp4" title="Busy Bridge At Night" tag1="Landscape" tag2="City" tag3="Night"/>
+                    </div>
+                    <div className="col-4 mt-5">
+                        <Card bgPath="darkalley.mov" title="Dark Alley At Night" tag1="Animated" tag2="Rain" tag3="Night"/>
+                        <Card bgPath="girlonledge.mov" title="Sitting On A Ledge" tag1="Animated" tag2="City" tag3="Girl"/>
+                        <Card bgPath="rainleaves.mov" title="Rainfall On Leaves" tag1="Animated" tag2="Rain" tag3="Nature"/>
+                        <Card bgPath="snowytracks.mp4" title="Snowy Tracks" tag1="Landscape" tag2="Snow" tag3="City"/>
+                        <Card bgPath="europeandaylight.mp4" title="European Springs" tag1="Landscape" tag2="City" tag3="Day"/>
+                    </div>
+                    <div className="col-4 mt-5">
+                        <Card bgPath="snowycity.mov" title="Snowy City" tag1="Animated" tag2="Snow" tag3="Night"/>
+                        <Card bgPath="spaceastronautstaringoutofwindow.mov" title="Astronaut Gazing At The Stars" tag1="Animated" tag2="Space" tag3="Astronaut"/>
+                        <Card bgPath="floorleaves.mov" title="Fall Rain" tag1="Landscape" tag2="Rain" tag3="Day"/>
+                        <Card bgPath="snowycozycabin.mov" title="Cozy Cabin In The Winter" tag1="Animated" tag2="Snow" tag3="Cabin"/>
+                        <Card bgPath="lushwaterfall.mp4" title="Lush Waterfall" tag1="Landscape" tag2="Nature" tag3="Day"/>
+                    </div>
                 </div>
             </div>
             

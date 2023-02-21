@@ -11,8 +11,8 @@ class Header extends Component {
 
     render() { 
         return (
-            <div className="header1 py-2 bg-dark text-white text-left row block">
-                <span className = "col h2 my-3 mx-5"><a className="text-white text-decoration-none" href="/">Ambifyy</a></span>
+            <div className="header1 py-2 bg-dark text-white text-left row block fixed-top">
+                <span className = "col h2 my-3 mx-5"><a className="text-white text-decoration-none" href="/home">Ambify</a></span>
                 {/*<span className = "float-right mr-5"><a className="text-white" href="/login"><i className="material-symbols-outlined account">account_circle</i></a></span>
                    <p><Link to="/Ambience">Ambience</Link></p>*/}
                 <span className="col-2 ">

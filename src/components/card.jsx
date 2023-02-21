@@ -10,13 +10,13 @@ class Card extends Component{
     render() { 
         return (
             <div className="card m-3 mb-5 text-black bg-white shadow-lg" onClick={this.fullScreen} style={{cursor: "pointer"}}>
-                <video className="card-img-top" src={"images/" + this.props.bgPath} autoplay="true" loop="true" ></video>
+                <video className="card-img-top" src={"images/" + this.props.bgPath} autoplay="true" loop="true" muted="true"></video>
                 <div className="card-body row">
                     <div className="text-left col-10 pl-10">
                         <h2 className="card-title m-2">{this.props.title}</h2>
-                        <span class="badge bg-primary p-2 m-2"><b>Winter</b></span>
-                        <span class="badge bg-primary p-2 m-2"><b>Cabin</b></span>
-                        <span class="badge bg-primary p-2 m-2"><b>Snow</b></span>
+                        <span className="badge bg-primary p-2 m-2"><b>{this.props.tag1}</b></span>
+                        <span className="badge bg-primary p-2 m-2"><b>{this.props.tag2}</b></span>
+                        <span className="badge bg-primary p-2 m-2"><b>{this.props.tag3}</b></span>
                     </div>
                     
                    

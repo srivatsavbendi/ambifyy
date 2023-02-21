@@ -21,11 +21,11 @@ class ExpandButton extends React.Component {
 
             document.querySelector('.image-bg').style.width = '60vw';
             document.querySelector('.image-bg').style.height = 'auto';
-            document.querySelector('.image-bg').style.marginTop = '8vh';
+            document.querySelector('.image-bg').style.marginTop = '17vh';
             document.querySelector('.image-bg').style.marginRight = '20vw';
 
             document.querySelector('.paneldiv').style.display = 'block';
-            document.querySelector('.paneldiv').style.marginTop = '22vh';
+            document.querySelector('.paneldiv').style.marginTop = '19vh';
             document.querySelector('.paneldiv').style.marginLeft = '73vw';
             document.querySelector('.paneldiv').style.marginRight = '10vw';
 
