@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ambify/static/css/main.54747bbc.css",
-    "main.js": "/ambify/static/js/main.533249ed.js",
+    "main.js": "/ambify/static/js/main.d5f3ee34.js",
     "static/js/787.1d469889.chunk.js": "/ambify/static/js/787.1d469889.chunk.js",
     "static/media/logo.svg": "/ambify/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/ambify/index.html",
     "main.54747bbc.css.map": "/ambify/static/css/main.54747bbc.css.map",
-    "main.533249ed.js.map": "/ambify/static/js/main.533249ed.js.map",
+    "main.d5f3ee34.js.map": "/ambify/static/js/main.d5f3ee34.js.map",
     "787.1d469889.chunk.js.map": "/ambify/static/js/787.1d469889.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54747bbc.css",
-    "static/js/main.533249ed.js"
+    "static/js/main.d5f3ee34.js"
   ]
 }
