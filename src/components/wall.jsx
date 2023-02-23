@@ -14,6 +14,7 @@ class Wall extends Component {
                         <Card bgPath="girlstudying.mov" title="Cozy Studying" tag1="Animated" tag2="Room" tag3="Chill"/>
                         <Card bgPath="nightparking.mp4" title="Chill In The Car" tag1="Landscape" tag2="City" tag3="Night"/>
                         <Card bgPath="nightbridge.mp4" title="Busy Bridge At Night" tag1="Landscape" tag2="City" tag3="Night"/>
+                        <Card bgPath="musicrecord.mp4" title="Spinning Records" tag1="Everyday" tag2="Room" tag3="Day"/>
                     </div>
                     <div className="col-4 mt-5">
                         <Card bgPath="darkalley.mov" title="Dark Alley At Night" tag1="Animated" tag2="Rain" tag3="Night"/>
@@ -21,6 +22,7 @@ class Wall extends Component {
                         <Card bgPath="rainleaves.mov" title="Rainfall On Leaves" tag1="Animated" tag2="Rain" tag3="Nature"/>
                         <Card bgPath="snowytracks.mp4" title="Snowy Tracks" tag1="Landscape" tag2="Snow" tag3="City"/>
                         <Card bgPath="europeandaylight.mp4" title="European Springs" tag1="Landscape" tag2="City" tag3="Day"/>
+                        <Card bgPath="paradise.mp4" title="Paradise Island" tag1="Landscape" tag2="Nature" tag3="Day"/>
                     </div>
                     <div className="col-4 mt-5">
                         <Card bgPath="snowycity.mov" title="Snowy City" tag1="Animated" tag2="Snow" tag3="Night"/>
@@ -28,6 +30,7 @@ class Wall extends Component {
                         <Card bgPath="floorleaves.mov" title="Fall Rain" tag1="Landscape" tag2="Rain" tag3="Day"/>
                         <Card bgPath="snowycozycabin.mov" title="Cozy Cabin In The Winter" tag1="Animated" tag2="Snow" tag3="Cabin"/>
                         <Card bgPath="lushwaterfall.mp4" title="Lush Waterfall" tag1="Landscape" tag2="Nature" tag3="Day"/>
+                        <Card bgPath="englandnight.mp4" title="An English Night" tag1="Landscape" tag2="City" tag3="Night"/>
                     </div>
                 </div>
             </div>

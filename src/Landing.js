@@ -9,7 +9,7 @@ class Landing extends Component {
         <LandingHeader/>
         <div className="py-5" style={{ backgroundColor: '#EAEDF1' }}>
             <div className="mt-5 py-5" style={{ backgroundColor: '#EAEDF1' }}>
-                <h1 className="fw-bold text-dark mt-5">Welcome to <i>ambifyy</i></h1>
+                <h1 className="fw-bold text-dark mt-5">Welcome to <i>ambify</i></h1>
                 <h3 className="m-3 text-muted"><i>Relax, focus, enjoy</i></h3>
                 <a href="/home" className="btn btn-primary btn-lg m-2">Get Started</a>
             </div>

@@ -4,6 +4,7 @@ import ToggleButton from './toggle_button';
 import LinkedButton from './linked_button';
 import ExpandButton from './expand_button';
 import MusicButton from './music_button';
+import VolumeButton from './volume_button';
 import { useEffect } from 'react';
 import './legit.css';
 import Timer from './timer';
@@ -14,21 +15,24 @@ import SongText from './song_text';
 class SidePanel extends React.Component {
     state = {
         songName: "Welcome!",
-        songAuthor: "Explore, Relax, Enjoy"
+        songAuthor: "Explore, Relax, Enjoy", 
+        volume: "1"
     }
     updateSongName = (name) => {
         this.setState({songName: name});
     }
     updateSongAuthor = (author) => {
         this.setState({songAuthor: author});
-        console.log("hello2"); 
+    }
+    setVolume = (volume) => {
+        this.setState({volume: volume});
     }
 
     render() {
         return (
-            <div className="fixed-top paneldiv ">
+            <div className="fixed-top paneldiv">
+                {/*<VolumeButton setVolume={this.setVolume}/>*/}
                 <div className="row panels panel shadow-lg">
-                    {/*<LinkedButton className="btn btn-lg m-1 shadow-lg" url="https://www.spotify.com/" text={spotify} />*/}
                     <div className="col-12 text-left my-1">
                         <SongText name={this.state.songName} author={this.state.songAuthor}/>
                     </div>
@@ -36,7 +40,7 @@ class SidePanel extends React.Component {
                         <MusicButton updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="jazz" text={<i className="material-symbols-outlined">music_note</i>}/>
                     </div>
                     <div className="col-4 justify-content-center">
-                        <MusicButton updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="classic" text={<i className="material-symbols-outlined">piano</i>}/>
+                        <MusicButton volume={this.state.volume} updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="classic" text={<i className="material-symbols-outlined">piano</i>}/>
                     </div>
                     <div className="col-4 justify-content-center">
                         <MusicButton updateSongName={this.updateSongName} updateSongAuthor={this.updateSongAuthor} type="lofi" text={<i className="material-symbols-outlined">radio</i>}/>

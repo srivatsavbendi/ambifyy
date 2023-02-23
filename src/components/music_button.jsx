@@ -46,6 +46,7 @@ class MusicButton extends React.Component {
                 this.props.updateSongAuthor(y);
                 this.setState({url: urls[random]}); 
                 this.refs.audioRef.src = urls[random];
+                this.refs.audioRef.volume = this.props.volume;
                 this.refs.audioRef.play();
             }
 
