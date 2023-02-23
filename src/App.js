@@ -21,7 +21,7 @@ function App() {
         <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path='/' element={<Landing/>} />
-          <Route path='/home' element={<Home />} />
+          <Route to="/home" element={<Home />} />
           <Route path='/ambience' element={<Ambience/>} />
         </Routes>
         </Router>
