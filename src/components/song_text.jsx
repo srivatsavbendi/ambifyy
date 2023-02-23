@@ -8,8 +8,8 @@ class SongText extends React.Component {
     render() {
         return (
             <div className="songtext">
-                <input className="border-0 display-6" disabled="true" type="text" value={this.props.name}/>
-                <input className="border-0 lead m-1" disabled="true" value={this.props.author}/>
+                <input className="bg-white border-0 display-6" disabled="true" type="text" value={this.props.name}/>
+                <input className="bg-white border-0 lead m-1" disabled="true" value={this.props.author}/>
             </div>
         );
     }

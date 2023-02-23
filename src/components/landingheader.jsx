@@ -12,7 +12,14 @@ class LandingHeader extends Component {
     render() { 
         return (
             <div className="header1 py-2 bg-dark text-white text-left row block fixed-top">
-                <span className = "col h2 my-3 mx-5"><a className="text-white text-decoration-none" href="/home">Ambify</a></span>
+                <span className = "col h2 my-3 mx-5"><a className="text-white text-decoration-none" href="/home"><i>ambifyy</i></a></span>
+                <span className="col-2">
+                    <div className="row px-5">
+                        <span className="col-3"></span>
+                        <span className="col-4"><LinkedButton title="Provide feedback" color="btn-secondary" url="mailto:srivatsavbendi@gmail.com" text={<i className="material-symbols-outlined">mail</i>} /></span>
+                        <span className="col-4"><LinkedButton title="Support Ambify" color="btn-primary" url="https://www.buymeacoffee.com/" text={<i className="material-symbols-outlined">local_cafe</i>} /></span>
+                    </div>
+                </span>
             </div>
         );
     }

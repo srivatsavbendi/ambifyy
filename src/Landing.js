@@ -9,7 +9,7 @@ class Landing extends Component {
         <LandingHeader/>
         <div className="py-5" style={{ backgroundColor: '#EAEDF1' }}>
             <div className="mt-5 py-5" style={{ backgroundColor: '#EAEDF1' }}>
-                <h1 className="fw-bold text-dark mt-5">Welcome to Ambify</h1>
+                <h1 className="fw-bold text-dark mt-5">Welcome to <i>ambifyy</i></h1>
                 <h3 className="m-3 text-muted"><i>Relax, focus, enjoy</i></h3>
                 <a href="/home" className="btn btn-primary btn-lg m-2">Get Started</a>
             </div>
@@ -22,7 +22,7 @@ class Landing extends Component {
                 <img src="images/sympathy.png" alt="sound effects" className="img-fluid rounded" />
               </div>
               <div className="col-md-4 text-right p-5">
-                <h1 className="fw-bold text-secondary">Customize your experience with relaxing music, sound effects, and an in-built productivity timer</h1>
+                <h1 className="fw-bold text-secondary">Customize your ambient experience with relaxing music, sound effects, and an in-built productivity timer</h1>
               </div>
             </div>
           </div>

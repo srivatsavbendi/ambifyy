@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Link} from 'react-router-dom';
 class LinkedButton extends React.Component {
     state = { 
         isToggled : true,
-        className : "btn btn-secondary btn-sm m-2 shadow-lg ",
+        className : "btn btn-sm m-2 shadow-lg ",
     }
 
     constructor(props) {
@@ -14,7 +14,7 @@ class LinkedButton extends React.Component {
         return (
             <div >
                 <a href={this.props.url}>
-                    <button className={this.state.className}>{this.props.text}</button>
+                    <button className={this.state.className + this.props.color} title={this.props.title} >{this.props.text}</button>
                 </a>
             </div>
         );
