@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header';
 import LandingHeader from './components/landingheader';
+import { Link } from 'react-router-dom';
 
 class Landing extends Component {
   render() {
