@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
         <script src="https://apis.google.com/js/api.js"></script>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path='/' element={<Landing/>} />
           <Route path='/home' element={<Home />} />
