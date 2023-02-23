@@ -24,11 +24,13 @@ import 'bootstrap/dist/js/bootstrap.js';
 
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(
-  ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-      <App/>
-    </React.StrictMode>
+  ReactDOM.render(
+    <Router basename={process.env.PUBLIC_URL}>
+      <App />
+    </Router>,
+    document.getElementById('root')
   );
+  
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

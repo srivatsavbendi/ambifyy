@@ -20,9 +20,9 @@ function App() {
         <script src="https://apis.google.com/js/api.js"></script>
         <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path='/' element={<Landing/>} />
-          <Route to="/home" element={<Home />} />
-          <Route path='/ambience' element={<Ambience/>} />
+          <Route exact path='/' element={<Landing/>} />
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path='/ambience' element={<Ambience/>} />
         </Routes>
         </Router>
     </div>

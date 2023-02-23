@@ -12,6 +12,7 @@ class Landing extends Component {
                 <h1 className="fw-bold text-dark mt-5">Welcome to <i>ambify</i></h1>
                 <h3 className="m-3 text-muted"><i>Relax, focus, enjoy</i></h3>
                 <a href="/home" className="btn btn-primary btn-lg m-2">Get Started</a>
+                <button className="btn btn-primary btn-lg m-2"><Link to="/home">Go to Home Page</Link></button>
             </div>
         </div>
 
