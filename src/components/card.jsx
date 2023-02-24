@@ -9,6 +9,7 @@ class Card extends Component{
 
     render() { 
         return (
+            <Link to="/ambience" className="text-decoration-none text-white">
             <div className="card m-3 mb-5 text-black bg-white shadow-lg" onClick={this.fullScreen} style={{cursor: "pointer"}}>
                 <video className="card-img-top" src={"images/" + this.props.bgPath} autoplay="true" loop="true" muted="true"></video>
                 <div className="card-body row">
@@ -22,15 +23,14 @@ class Card extends Component{
                    
                 </div>
             </div>
+            </Link>
         );
     }
 
     fullScreen = () => {
-        let x = "path: " + this.props.bgPath;
+        let x = "path: " + this.props.bgPath; 
         console.log(x); 
         document.cookie = x; 
-        document.location.pathname = "/ambience"; 
-        document.documentElement.requestFullscreen();
     }
 }
  

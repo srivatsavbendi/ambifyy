@@ -19,26 +19,14 @@ function Ambience() {
 
     useEffect(() => {
         let path = "images/" + document.cookie.split("path: ")[1]; 
-        // let path = "images/1.gif";
         setSource(path);
     })
 
     return (
         <div className="bgDiv" style={{ overflow: 'hidden' }}>
             <Header/>
-            <video className="image-bg shadow-lg" src={source} autoplay="true" loop="true" muted="true" style={{ overflow: 'hidden' }}></video>
-    
-            {/* 
-                <ReactPlayer className="image-bg shadow-lg" source="C:\Users\sriva\newambify\public\images\spaceastronautstaringoutofwindow.mov" playing="true" loop="true"/>
-                <ReactPlayer
-                    className="image-bg shadow-lg"
-                    url="C:\Users\sriva\newambify\public\images\spaceastronautstaringoutofwindow.mov"
-                    playing
-                    loop
-                    controls={false}
-                />
-            */}
-                <SidePanel />
+            <video className="image-bg shadow-lg" src={source} autoplay="true" loop="true" muted="true" disabled="false" style={{ overflow: 'hidden' }}></video>
+            <SidePanel />
         </div>
     );    
     
