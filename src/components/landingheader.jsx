@@ -12,7 +12,7 @@ class LandingHeader extends Component {
     render() { 
         return (
             <div className="header1 py-2 bg-dark text-white text-left row block fixed-top">
-                <span className = "col h2 my-3 mx-5"><Link to="/home" className="text-decoration-none text-white"><i>ambify</i></Link></span>
+                <span className = "col h2 my-3 mx-5"><Link to="/home" className="text-decoration-none text-white"><i>ambifyy</i></Link></span>
                 <span className="col-2">
                     <div className="row px-5">
                         <span className="col-3"></span>
