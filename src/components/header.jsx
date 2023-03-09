@@ -17,7 +17,7 @@ class Header extends Component {
                    <p><Link to="/Ambience">Ambience</Link></p>*/}
                 <span className="col-2 ">
                     <div className="row px-5">
-                        <span className="col-4"><LinkedButton color="btn-primary" url="https://www.buymeacoffee.com/" text={<i className="material-symbols-outlined">local_cafe</i>} /></span>
+                        <span className="col-4"><LinkedButton color="btn-primary" url="https://www.buymeacoffee.com/srivatsavb" text={<i className="material-symbols-outlined">local_cafe</i>} /></span>
                         <span className="col-4 displaybtn"><DisplayButton text={<i className="material-symbols-outlined">expand_more</i>} /></span>
                         <span className="col-4"><ExpandButton text={<i className="material-symbols-outlined">open_in_full</i>} /></span>
                     </div>
