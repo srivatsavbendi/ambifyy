@@ -9,7 +9,7 @@ class Wall extends Component {
             <div className = "row m-4 mt-5">
                 <div className="row mt-3">
                     <div className="col-4 mt-5">
-                        <Card bgPath="Untitled.mp4" title="Train Through Paris " tag1="Landscape" tag2="City" tag3="Night"/>
+                        <Card bgPath="paristrain.mov" title="Train Through Paris " tag1="Landscape" tag2="City" tag3="Night"/>
                         <Card bgPath="watershoes.mov" title="Standing In The Rain" tag1="Animated" tag2="Rain" tag3="Sneakers"/>
                         <Card bgPath="girlstudying.mov" title="Cozy Studying" tag1="Animated" tag2="Room" tag3="Chill"/>
                         <Card bgPath="nightparking.mp4" title="Chill In The Car" tag1="Landscape" tag2="City" tag3="Night"/>
