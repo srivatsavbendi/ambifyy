@@ -12,7 +12,7 @@ class Wall extends Component {
   componentDidMount() {
     this.observer = new IntersectionObserver(this.handleIntersection, {
       rootMargin: '0px',
-      threshold: 0.5, // Load video when at least 50% of the card is visible
+      threshold: 1.0, // Load video when at least 50% of the card is visible
     });
 
     Object.keys(this.videoRefs).forEach((bgPath) => {
