@@ -60,7 +60,7 @@ class Wall extends Component {
                 muted
                 playsInline
               >
-                <source src="watershoes.mp4" type="video/mp4" />
+                <source src="watershoes.mov" type="video/mp4" />
               </video>
             </Card>
             <Card bgPath="spaceastronautstaringoutofwindow.mov" title="Astronaut Gazing At The Stars" tag1="Animated" tag2="Space" tag3="Astronaut">
@@ -70,7 +70,7 @@ class Wall extends Component {
                 muted
                 playsInline
               >
-                <source src="spaceastronautstaringoutofwindow.mp4" type="video/mp4" />
+                <source src="spaceastronautstaringoutofwindow.mov" type="video/mp4" />
               </video>
             </Card>
             <Card bgPath="paristrain.mp4" title="Train Through Paris " tag1="Landscape" tag2="City" tag3="Night">
@@ -115,7 +115,7 @@ class Wall extends Component {
                 muted
                 playsInline
               >
-                <source src="darkalley.mp4" type="video/mp4" />
+                <source src="darkalley.mov" type="video/mp4" />
               </video>
             </Card>
             <Card bgPath="nightparking.mp4" title="Chill In The Car" tag1="Landscape" tag2="City" tag3="Night">
@@ -170,7 +170,7 @@ class Wall extends Component {
                 muted
                 playsInline
               >
-                <source src="girlonledge.mp4" type="video/mp4" />
+                <source src="girlonledge.mov" type="video/mp4" />
               </video>
             </Card>
             <Card bgPath="musicrecord.mp4" title="Spinning Records" tag1="Everyday" tag2="Room" tag3="Day">
