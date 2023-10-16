@@ -1,7 +1,7 @@
 # Ambifyy 
 A React web app that empowers users to customize their study or relaxation experience. Users choose from various dynamic backgrounds, music, and sound effects to create a virtual environment tailored to your needs.
 
-https://ambifyy.com/
+[Visit Beatwise](https://ambifyy.com/)
 
 ### Key Skills and Tools
 * Full Stack Development
